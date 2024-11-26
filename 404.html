@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,12 +13,11 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #000000, #030303);
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             position: relative;
+            overflow: hidden;
         }
 
         .stars {
@@ -43,41 +43,22 @@
             }
         }
 
-
         .container {
-            text-align: center;
-            animation: fadeIn 1.5s ease-in-out;
-            position: relative;
             z-index: 2;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
         .error-code {
-            font-size: 8rem;
+            font-size: calc(6rem + 2vw);
             font-weight: bold;
             text-shadow: 0 0 20px #fff, 0 0 30px #2c9ff7, 0 0 40px #2c9ff7, 0 0 50px #1a73e8;
         }
 
         .message {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: calc(1rem + 0.5vw);
         }
 
-
         .astronaut {
-            width: 150px;
+            max-width: 200px;
             margin: 20px auto;
             animation: float 3s infinite ease-in-out;
         }
@@ -94,23 +75,6 @@
             }
         }
 
-
-        .back-link {
-            font-size: 1.2rem;
-            color: #ffcc00;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: rgba(0, 0, 0, 0.2);
-            transform: scale(1.1);
-        }
-
-
         .moon {
             position: absolute;
             top: 10%;
@@ -121,7 +85,6 @@
             border-radius: 50%;
             box-shadow: 0 0 30px rgba(243, 244, 245, 0.5);
         }
-
 
         .alien {
             position: absolute;
@@ -176,11 +139,15 @@
 
 <body>
     <div class="stars"></div>
-    <div class="container">
-        <div class="error-code">404</div>
-        <p class="message">Oh no! It looks like you're lost in space.</p>
-        <img src="https://i.imgur.com/qIufhof.png" alt="Astronaut in Space" class="astronaut">
-        <a href="/" class="back-link">Go Back Home</a>
+    <div class="container-fluid d-flex flex-column justify-content-between h-100">
+        <div class="text-center mt-5">
+            <div class="error-code">404</div>
+            <p class="message">Ooops! It looks like you're lost in space.</p>
+            <img src="https://i.imgur.com/qIufhof.png" alt="Astronaut in Space" class="astronaut img-fluid">
+        </div>
+        <div class="text-center mb-4">
+            <a href="/" class="btn btn-warning">Go Back Home</a>
+        </div>
     </div>
     <div class="moon"></div>
     <div class="alien"></div>
