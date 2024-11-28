@@ -43,11 +43,12 @@
             font-weight: 600;
         }
 
+
         .hero-section {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 50px 100px;
+            padding: 30px 90px;
             background-color: #fff;
             height: 100vh;
         }
@@ -59,7 +60,7 @@
         .hero-text h1 {
             font-size: 48px;
             font-weight: bold;
-            color: #333;
+            color: #333333;
         }
 
         .hero-text span {
@@ -68,13 +69,13 @@
 
         .hero-text p {
             font-size: 18px;
-            margin: 20px 0;
+            margin: 0px 0;
             line-height: 1.6;
         }
 
         .hero-text .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 10px 10px;
             background-color: #e63946;
             color: #fff;
             text-decoration: none;
@@ -91,6 +92,7 @@
             height: auto;
             border-radius: 10px;
         }
+
 
         section {
             padding: 50px 20px;
@@ -110,18 +112,20 @@
             margin: 0 auto 30px;
         }
 
+
         .about-section {
             background-color: #e0f7fa;
         }
 
         .about-image {
             margin: 20px auto;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background: url('https://raw.githubusercontent.com/COCuenca/Pictures/c0ca8f2a60b78e41ac4038632800e53947eb8b22/Me.jpg') no-repeat center center/cover;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
 
         .activities-section {
             background-color: #fdf9c4;
@@ -151,6 +155,7 @@
             background-color: #d84315;
         }
 
+
         .contact-section {
             background-color: #dcedc8;
         }
@@ -165,7 +170,7 @@
         .contact-card {
             flex: 1 1 310px;
             max-width: 310px;
-            background-color: white;
+            background-color: rgb(247, 247, 247);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -198,6 +203,7 @@
             padding: 15px 0;
             text-align: center;
         }
+
 
         @media screen and (max-width: 1200px) {
             .hero-section {
@@ -239,13 +245,14 @@
             }
 
             footer {
-                padding: 10px;
+                padding: 0px;
             }
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <div class="logo">COC</div>
         <nav>
@@ -259,7 +266,9 @@
     <section class="hero-section">
         <div class="hero-text">
             <h1>Hello, I'm <span>Christian O. Cuenca</span></h1>
-            <p>n IT student at PUP-STC with a passion for technology, design, and web development. I enjoy exploring innovative solutions, creating functional websites, and continuously learning to enhance my technical skills and creativity</p>
+            <p>I'm an IT student at PUP-STC with a passion for technology, design, and web development. I enjoy
+                exploring innovative solutions, creating functional websites, and continuously learning to enhance my
+                technical skills and creativity.</p>
         </div>
         <div class="hero-image">
             <img src="https://raw.githubusercontent.com/COCuenca/Pictures/c0ca8f2a60b78e41ac4038632800e53947eb8b22/Me.jpg"
@@ -267,23 +276,211 @@
         </div>
     </section>
 
-    <section class="about-section" id="about">
-        <h2>About Me</h2>
-        <div class="about-image"></div>
-        <p>Hi, I'm Christian O. Cuenca. A visual designer and web developer passionate about crafting beautiful and
-            functional designs.</p>
+    <style>
+        <div class="hero-image"><img src="https://raw.githubusercontent.com/COCuenca/Pictures/c0ca8f2a60b78e41ac4038632800e53947eb8b22/Me.jpg" alt="Christian Cuenca">display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 100px;
+        background-color: #fff;
+        height: 100vh;
+
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+
+            animation: fall 1.5s ease-out forwards;
+
+        }
+
+        .hero-text span {
+            color: #e63946;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            animation: bounce 2s infinite;
+
+        }
+
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+
+            }
+
+            50% {
+                transform: translateY(-20px);
+
+            }
+        }
+
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-30px);
+
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+
+                opacity: 1;
+
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                padding: 50px 20px;
+                text-align: center;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-section {
+                flex-direction: column;
+                padding: 30px 10px;
+            }
+
+            .hero-image img {
+                max-width: 250px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    </style>
+
+    </style>
+
+    <section class="about-section" id="about"
+        style="background-color: #e0f7fa; padding-right: 50px 20px; text-align: center;">
+        <h2 style="font-size: 36px; color: #333; margin-right: 50px;">About Me</h2>
+        <div class="about-image" style="
+            margin-right: 40px auto;
+            width: 300px;
+            height: 300px;
+            background: url('https://raw.githubusercontent.com/COCuenca/Pictures/c0ca8f2a60b78e41ac4038632800e53947eb8b22/Me.jpg') no-repeat center center/cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto 30px;">
+            Hi, I'm Christian O. Cuenca. These are my previos schools when I was an elementary, Junior Highscool, and
+            senior Highschool.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+
+            <div style="
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 250px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img src="https://raw.githubusercontent.com/COCuenca/Pictures/refs/heads/main/AES.jpg"
+                    alt="Card 1 Image"
+                    style="width: 100%; height: auto; object-fit: contain; transition: transform 0.3s;">
+                <p style="margin: 10px 0; font-size: 16px; font-weight: bold; color: #333;">Elementary</p>
+            </div>
+
+            <div style="
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 250px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img src="https://raw.githubusercontent.com/COCuenca/Pictures/refs/heads/main/AINHS.png"
+                    alt="Card 2 Image"
+                    style="width: 100%; height: auto; object-fit: contain; transition: transform 0.3s;">
+                <p style="margin: 15px 0; font-size: 16px; font-weight: bold; color: #333;">High School</p>
+            </div>
+
+            <div style="
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 250px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img src="https://raw.githubusercontent.com/COCuenca/Pictures/refs/heads/main/PVMIS.jpg"
+                    alt="Card 3 Image"
+                    style="width: 100%; height: auto; object-fit: contain; transition: transform 0.3s;">
+                <p style="margin: 15px 0; font-size: 16px; font-weight: bold; color: #333;">Senior High School</p>
+            </div>
+        </div>
     </section>
+
+    <style>
+        div[style*="transition: transform"] {
+            cursor: pointer;
+        }
+
+        div[style*="transition: transform"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        div[style*="transition: transform"] img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
 
     <section class="activities-section" id="activities">
         <h2>Activities</h2>
         <p>Here are some of the exciting things I love to do:</p>
         <div class="buttons-container">
-            <a href=""
+            <a href="https://drive.google.com/file/d/1_no4Z5xeda-oinmBJOJQn9Q4Y9lrlSwh/view?usp=sharing"
                 class="activity-button">Brochure</a>
             <a href="https://cocuenca.github.io/Act.2/index.html" class="activity-button">Seven Lakes</a>
             <a href="#" class="activity-button">Portfolio</a>
             <a href="https://cocuenca.github.io/Act.4/index.html" class="activity-button">API</a>
-            <a href="https://www.youtube.com/embed/QMnEP2DYfmI?si=ydj-YBPliI3j_S-u" class="activity-button">Embbeded Video</a>
+            <a href="https://www.youtube.com/embed/QMnEP2DYfmI?si=ydj-YBPliI3j_S-u" class="activity-button">Embbeded
+                Video</a>
         </div>
     </section>
 
@@ -295,7 +492,7 @@
                 <p><a href="mailto:cuencachristianodchimar1220@gmail.com">cuencachristianodchimar1220@gmail.com</a></p>
             </div>
             <div class="contact-card">
-                <h3>Phone</h3>
+                <h3>Contact Number</h3>
                 <p>09300324397</p>
             </div>
             <div class="contact-card">
@@ -305,9 +502,20 @@
             </div>
         </div>
     </section>
-    <footer>
-        © 2024 Christian O. Cuenca. All rights reserved.
-    </footer>
-</body>
 
-</html>
+    <section class="activities-section" id="activities">
+    </section>
+
+    <section id="location">
+        <h2>My Location</h2>
+        <p>Here is where you can find me:</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61928.87453044478!2d121.20825986880358!3d14.04439211275871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd68306a6d54d1%3A0xef3ccbe688f795d0!2sAlaminos%2C%20Laguna!5e0!3m2!1sen!2sph!4v1732606536282!5m2!1sen!2sph"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+        © 2024 Christian O. Cuenca. All rights reserved.
+    </section>
