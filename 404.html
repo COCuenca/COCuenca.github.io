@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Not Found</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/COCuenca/Pictures/refs/heads/main/images.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -17,7 +18,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             text-align: center;
             position: relative;
         }
@@ -73,6 +74,7 @@
         .container-fluid {
             z-index: 2;
             position: relative;
+            padding-top: 50px;
         }
 
         .error-code {
@@ -104,6 +106,14 @@
         .btn-warning:hover {
             background-color: #e07b00;
             transform: scale(1.1);
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
         }
 
         @media (max-width: 768px) {
@@ -167,25 +177,20 @@
 </head>
 
 <body>
-
     <div class="stars"></div>
-
-
     <div class="planet orbiting-planet"></div>
-
-
     <div class="moon"></div>
-
-    <div class="container-fluid d-flex flex-column justify-content-between align-items-center h-100">
-
-        <div class="text-center mt-5">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center h-100">
+        <div class="text-center">
             <div class="error-code">404</div>
             <p class="message">Ooops! It looks like you're lost in space.</p>
         </div>
-        <div class="text-center mb-4 mt-auto">
+        <div class="button-container">
             <a href="https://cocuenca.github.io/" class="btn btn-warning">Go Back Home</a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
